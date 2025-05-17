@@ -102,127 +102,160 @@ CREATE TABLE Table_Name (
   col_name3 data_type DEFAULT 'default_value'
 );
 ```
-
 **Question 1**
---
--- Paste Question 1 here
+---
+![Screenshot 2025-05-17 201705](https://github.com/user-attachments/assets/a279c2a9-58bb-437e-bc02-6ab23237bf74)
 
-```sql
--- Paste your SQL code below for Question 1
+```
+create table Products(
+ProductID integer primary key,
+ProductName text NOT NULL,
+Price real check(Price >0),
+Stock integer check(Stock >=0)
+);
 ```
 
 **Output:**
-
-![Output1](output.png)
+![Screenshot 2025-05-17 201827](https://github.com/user-attachments/assets/eb54e399-5176-4465-8dac-624ca3153273)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![Screenshot 2025-05-17 202109](https://github.com/user-attachments/assets/159b8d48-90c6-45b9-abb2-924ad9b8407b)
 
 ```sql
--- Paste your SQL code below for Question 2
+insert into Student_details(RollNo,Name,Gender,Subject,MARKS)
+values(205,'Olivia Green','F',NULL,NULL);
+insert into Student_details(RollNo,Name,Gender,Subject,MARKS)
+values(207,'Liam Smith','M','Mathematics',85);
+insert into Student_details(RollNo,Name,Gender,Subject,MARKS)
+values(208,'Sophia Johnson','F','Science',NULL);
 ```
 
 **Output:**
-
-![Output2](output.png)
+![Screenshot 2025-05-17 202132](https://github.com/user-attachments/assets/1c211e0a-c428-47f2-a8e1-bf13fbdf1a42)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![Screenshot 2025-05-17 202302](https://github.com/user-attachments/assets/7609915f-8021-4909-962e-160884e2015b)
 
 ```sql
--- Paste your SQL code below for Question 3
+insert into Books( ISBN, Title, Author, Publisher, YearPublished)
+select  ISBN, Title, Author, Publisher, YearPublished
+from Out_of_print_books
 ```
 
 **Output:**
-
-![Output3](output.png)
+![Screenshot 2025-05-17 202319](https://github.com/user-attachments/assets/92996dc8-c2fc-43ac-a0d4-b4bc01af90d9)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![Screenshot 2025-05-17 202447](https://github.com/user-attachments/assets/5b6c4553-4132-4b38-a20a-cf6e716c3ee0)
 
 ```sql
--- Paste your SQL code below for Question 4
+create table item(
+item_id text primary key,
+item_desc text not null,
+rate integer not null,
+icom_id text check(length(icom_id)=4),
+foreign key (icom_id) references company(com_id)on update set null on delete set null
+);
 ```
 
 **Output:**
-
-![Output4](output.png)
+![Screenshot 2025-05-17 202515](https://github.com/user-attachments/assets/4207b375-3491-425d-9e6c-14310a38b57a)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![Screenshot 2025-05-17 202724](https://github.com/user-attachments/assets/58d589de-3a04-4203-89b4-a8fe0943330e)
 
 ```sql
--- Paste your SQL code below for Question 5
+alter table Student_details
+add column Date_of_birth Date;
 ```
 
 **Output:**
-
-![Output5](output.png)
+![Screenshot 2025-05-17 202742](https://github.com/user-attachments/assets/457cc408-b846-441e-8192-c5dbecd5c4f1)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Screenshot 2025-05-17 202902](https://github.com/user-attachments/assets/5a92829d-77bb-415e-be26-699292d97762)
 
 ```sql
--- Paste your SQL code below for Question 6
+alter table customer
+add column discount DECIMAL(5,2);
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Screenshot 2025-05-17 202916](https://github.com/user-attachments/assets/5c7f8d8b-40e6-460d-bb2f-0e6b45565258)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Screenshot 2025-05-17 203107](https://github.com/user-attachments/assets/30a8f2fc-c3c8-4891-adae-945d3b75b329)
 
 ```sql
--- Paste your SQL code below for Question 7
+create table contacts(
+contact_id integer primary key,
+first_name text not null,
+last_name text not null,
+email text,
+phone text not null check(length(phone)>=(10))
+);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![Screenshot 2025-05-17 203118](https://github.com/user-attachments/assets/c757207f-8dc6-4bdb-b9e9-0adb481fb2ff)
 
 **Question 8**
 ---
--- Paste Question 8 here
+![Screenshot 2025-05-17 203408](https://github.com/user-attachments/assets/544dfea1-59ea-4bc3-87c6-80ebef6e4a9a)
 
 ```sql
--- Paste your SQL code below for Question 8
+create table Shipments(
+ShipmentID integer primary key,
+ShipmentDate date,
+SupplierId integer,
+OrderID integer,
+foreign key (SupplierId) references Suppliers(SupplierID),
+foreign key (OrderId) references Orders(OrderID)
+);
 ```
 
 **Output:**
-
-![Output8](output.png)
+![Screenshot 2025-05-17 203423](https://github.com/user-attachments/assets/f8da5273-68c0-4080-ba8c-71c0cdad7430)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Screenshot 2025-05-17 203515](https://github.com/user-attachments/assets/32593d7d-a410-4167-954e-5a0a7e227627)
 
 ```sql
--- Paste your SQL code below for Question 9
+insert into Employee(EmployeeID,Name,Position)
+values(4,'Emily White','Analyst');
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Screenshot 2025-05-17 203524](https://github.com/user-attachments/assets/aa303172-7169-4109-9de4-6029fab4887d)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![Screenshot 2025-05-17 203727](https://github.com/user-attachments/assets/d478f7f4-c7c1-4eea-94d3-a53107b1e4f8)
 
 ```sql
--- Paste your SQL code below for Question 10
+create table Orders(
+OrderID INTEGER,
+OrderDate TEXT,
+CustomerID INTEGER
+);
 ```
 
 **Output:**
+![Screenshot 2025-05-17 203805](https://github.com/user-attachments/assets/ff16d3ca-6669-4180-828c-b51ae08a2f27)
 
-![Output10](output.png)
-
+**SEB GRADE**
+---
+![image](https://github.com/user-attachments/assets/be4c66ab-2ca2-48dd-a256-d5328c4d9955)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
