@@ -174,6 +174,7 @@ WHERE s.commission = (
 
 **Question 9**
 ---
+![image](https://github.com/user-attachments/assets/5537c616-b15f-41fb-afe1-fe3680509538)
 
 
 ```sql
@@ -183,20 +184,29 @@ WHERE AGE < 30;
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/1aee8492-97a8-43b0-b8bd-33e6c78a9675)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/a6737eda-9872-451b-a781-05e9c53dcb67)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT customer_id,cust_name,city,grade,salesman_id
+FROM customer
+WHERE customer_id = (SELECT salesman_id -2001
+FROM salesman
+WHERE name = 'Mc Lyon')
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Screenshot 2025-05-19 114730](https://github.com/user-attachments/assets/be1eb058-4fd6-4f76-825d-bed8cd2ff791)
 
+**SEB GRADE**
+
+![Screenshot 2025-05-19 113017](https://github.com/user-attachments/assets/9575b33b-3128-4059-97e4-de70156e3d13)
 
 ## RESULT
 Thus, the SQL queries to implement subqueries and views have been executed successfully.
