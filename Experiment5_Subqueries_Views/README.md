@@ -114,7 +114,7 @@ WHERE ADDRESS ='Delhi';
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/79c991dc-b147-4fb7-9668-4b4f99c502d5)
 
 **Question 6**
 ---
