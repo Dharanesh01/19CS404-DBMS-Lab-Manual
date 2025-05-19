@@ -47,27 +47,35 @@ SELECT column1, column2 FROM table_name WHERE condition;
 ```
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/0b5b4cd0-6652-47db-a19a-e2e67b3f2e78)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+UPDATE products
+SET availability=availability*2
+WHERE product_id=1;
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/00e1cf05-e944-4cff-8426-2a2e0a35d044)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/efa4aa56-9331-4360-8909-ad3964807711)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+UPDATE Employees
+SET SALARY = SALARY * 2
+WHERE job_id ='MK_MAN' and department_id=20;
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/4fb430c0-2908-4f48-9620-7393b106f7c1)
+
 
 **Question 3**
 ---
