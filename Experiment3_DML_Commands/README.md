@@ -129,7 +129,8 @@ WHERE (GRADE IS '2' AND CUST_NAME LIKE 'M%') AND PAYMENT_AMT <5000;
 
 ```sql
 DELETE FROM Customer
-WHERE CUST_COUNTRY NOT IN ('UK','USA','Canada') AND GRADE >=3;```
+WHERE CUST_COUNTRY NOT IN ('UK','USA','Canada') AND GRADE >=3;
+```
 
 **Output:**
 ![Screenshot 2025-05-19 131541](https://github.com/user-attachments/assets/a214f2c4-5000-4fe2-a410-f13ce46b54e0)
