@@ -205,6 +205,7 @@ group by Frequency
 **Output:**
 
 ![Screenshot 2025-05-19 112711](https://github.com/user-attachments/assets/0d3bab52-36f8-427e-9223-5514f0474aa4)
+
 **SEB GRADE**
 ![Screenshot 2025-05-19 113007](https://github.com/user-attachments/assets/5e2eee4a-89d4-436b-918f-980d6c635596)
 
