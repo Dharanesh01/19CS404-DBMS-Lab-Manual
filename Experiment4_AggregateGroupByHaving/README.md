@@ -179,7 +179,8 @@ having MIN(workhour)>8;
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Screenshot 2025-05-19 112645](https://github.com/user-attachments/assets/88f6524f-81c5-4273-a4c4-f96f171f1071)
+
 
 ```sql
 select Medication, COUNT(*)as TotalPrescriptions
@@ -189,11 +190,11 @@ group by Medication;
 
 **Output:**
 
-![Output9](output.png)
+![Screenshot 2025-05-19 112656](https://github.com/user-attachments/assets/5e96541f-4765-480a-88c8-3cba739c4f74)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![Screenshot 2025-05-19 112705](https://github.com/user-attachments/assets/23a424b7-ff91-437b-966d-1736f203466d)
 
 ```sql
 select Frequency,COUNT(*)as TotalPrescriptions
@@ -203,8 +204,9 @@ group by Frequency
 
 **Output:**
 
-![Output10](output.png)
-
+![Screenshot 2025-05-19 112711](https://github.com/user-attachments/assets/0d3bab52-36f8-427e-9223-5514f0474aa4)
+**SEB GRADE**
+![Screenshot 2025-05-19 113007](https://github.com/user-attachments/assets/5e2eee4a-89d4-436b-918f-980d6c635596)
 
 ## RESULT
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
