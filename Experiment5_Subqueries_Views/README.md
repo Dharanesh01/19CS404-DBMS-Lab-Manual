@@ -38,58 +38,78 @@ DROP VIEW view_name;
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/4ffce4b4-8b13-49b6-a09b-5d3322e8bd65)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT grade ,COUNT(*) 
+FROM customer
+GROUP BY grade
+HAVING grade >(SELECT AVG(grade)
+FROM customer
+WHERE city = 'New York');
 ```
 
 **Output:**
-
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/a7c84214-c7ee-4db0-9d02-a5a18ffd3602)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/58581fa0-ddb0-4003-a356-cbbed8a8105a)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT department_id as depar, department_name
+FROM departments
+WHERE LENGTH(department_name) > (
+    SELECT AVG(LENGTH(department_name)) FROM departments
+);
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/7eea6646-07eb-4fca-8d2e-a2e92ebeec54)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/d4700024-6e23-4609-b24a-625dd7f47293)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT * FROM GRADES g
+WHERE g.grade=(SELECT MAX(grade)FROM GRADESWHERE subject=g.subject);
 ```
 
 **Output:**
-
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/b7741619-0997-4a35-b69c-f9de8c8eac41)
 
 **Question 4**
----
--- Paste Question 4 here
+
+---![image](https://github.com/user-attachments/assets/e8e59324-5739-4a3c-8fb1-132dd7c5710a)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT * FROM Employee
+WHERE age <(
+SELECT AVG(age)
+FROM Employee
+WHERE income>1000000);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/577111f8-9b60-4e8c-9a08-ff9270d9d3a3)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/1e1a4c89-f97d-4baf-865e-12def990be48)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT * FROM CUSTOMERS
+WHERE ADDRESS ='Delhi';
 ```
 
 **Output:**
@@ -98,46 +118,67 @@ DROP VIEW view_name;
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/223bc0ae-2186-46ce-bf5c-c4425f449dc5)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT o.ord_no,o.purch_amt,o.ord_date,o.customer_id,o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id=s.salesman_id
+WHERE s.city = 'London';
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Screenshot 2025-05-19 114248](https://github.com/user-attachments/assets/2e6839ce-9f52-4236-8612-ae4effb97dc6)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Screenshot 2025-05-19 114321](https://github.com/user-attachments/assets/87adbd69-c810-47dc-988a-668cf9fcfbe3)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT s.salesman_id,s.name
+FROM salesman s
+JOIN customer c ON s.salesman_id=c.salesman_id
+GROUP BY s.salesman_id,s.name
+HAVING COUNT(c.customer_id)>1;
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/0126fe95-f8f2-4618-8ce7-41b36923e2f6)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/6da33aae-d118-42a3-b78c-16b22836003f)
 
-```sql
--- Paste your SQL code below for Question 8
+
+```sqlSELECT 
+    o.ord_no,
+    o.purch_amt,
+    o.ord_date,
+    o.salesman_id
+FROM orders o
+JOIN salesman s ON o.salesman_id = s.salesman_id
+WHERE s.commission = (
+    SELECT MAX(commission) FROM salesman
+);
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/cf00121a-4d7f-44a4-8792-2f66b3cfb725)
 
 **Question 9**
 ---
--- Paste Question 9 here
+
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT * FROM CUSTOMERS
+WHERE AGE < 30;
 ```
 
 **Output:**
