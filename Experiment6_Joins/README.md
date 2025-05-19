@@ -259,7 +259,8 @@ WHERE
 **Output:**
 
 ![Screenshot 2025-05-19 105859](https://github.com/user-attachments/assets/9507f981-3b59-456d-b0e0-ab969e2a2a38)
-
+**SEB GRADE**
+![Screenshot 2025-05-19 111930](https://github.com/user-attachments/assets/3bbc11b0-d2c5-44d7-8b98-3512fbcaa8ef)
 
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
