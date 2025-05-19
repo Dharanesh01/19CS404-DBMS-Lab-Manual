@@ -104,7 +104,7 @@ from fruits;
 
 
 ```sql
--- Paste your SQL code below for Question 4
+select SUM(workhour) as 'Total working hours' from employee1
 ```
 
 **Output:**
@@ -118,7 +118,8 @@ from fruits;
 
 
 ```sql
--- Paste your SQL code below for Question 5
+select AVG(purch_amt) as AVERAGE
+from orders;
 ```
 
 **Output:**
@@ -132,7 +133,10 @@ from fruits;
 
 
 ```sql
--- Paste your SQL code below for Question 6
+select city ,AVG(income)
+from employee
+group by city
+having AVG(income)>500000
 ```
 
 **Output:**
@@ -146,7 +150,10 @@ from fruits;
 
 
 ```sql
--- Paste your SQL code below for Question 7
+select occupation,AVG(workhour)
+from employee1
+group by occupation
+having AVG(workhour) between 10 and 12;
 ```
 
 **Output:**
@@ -160,7 +167,10 @@ from fruits;
 
 
 ```sql
--- Paste your SQL code below for Question 8
+select occupation ,MIN(workhour)
+from employee1
+group by occupation
+having MIN(workhour)>8;
 ```
 
 **Output:**
@@ -172,7 +182,9 @@ from fruits;
 -- Paste Question 9 here
 
 ```sql
--- Paste your SQL code below for Question 9
+select Medication, COUNT(*)as TotalPrescriptions
+from Prescriptions
+group by Medication;
 ```
 
 **Output:**
@@ -184,7 +196,9 @@ from fruits;
 -- Paste Question 10 here
 
 ```sql
--- Paste your SQL code below for Question 10
+select Frequency,COUNT(*)as TotalPrescriptions
+from Prescriptions 
+group by Frequency
 ```
 
 **Output:**
